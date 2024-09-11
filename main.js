@@ -1,16 +1,14 @@
-var containerdiv = document.querySelector('div');
-
-var increaseBtn = document.querySelector('#increase');
-var decreaseBtn = document.querySelector('#decrease');
-
 var fontSize = 16;
 
-increaseBtn.addEventListener('click', () => {
-    fontSize += 2;
-    containerdiv.style.fontSize = fontSize + 'px';
-});
+function increaseFontSize() {
+    fontSize = fontSize + 2;
+    document.querySelector("div").style.fontSize = fontSize + 'px';
+}
+function decreaseFontSize() {
+    fontSize = fontSize - 2;
+    document.querySelector("div").style.fontSize = fontSize + 'px';
+}
 
-decreaseBtn.addEventListener('click', () => {
-    fontSize -= 2; // Decrease font size by 2px
-    containerdiv.style.fontSize = fontSize + 'px';
-});
+
+document.querySelector(".increase").onclick = increaseFontSize;
+document.querySelector(".decrease").onclick = decreaseFontSize;
